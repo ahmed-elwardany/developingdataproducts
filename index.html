@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mtcars Plotting Application</title>
+  <meta charset="utf-8">
+  <meta name="description" content="mtcars Plotting Application">
+  <meta name="author" content="Ahmed Elwardany">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/slides" 
+    src="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>mtcars Plotting Application</h1>
+    <h2></h2>
+    <p>Ahmed Elwardany<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="class" id="id" style="background:lightgrey;">
+  <hgroup>
+    <h2>mtcars Dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>(mtcars) dataset was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models.</p></li>
+<li><p>A data frame with 32 observations on 11 variables.</p>
+
+<pre><code>mpg     Miles/(US) gallon
+cyl     Number of cylinders
+disp    Displacement (cu.in.)
+hp      Gross horsepower
+drat    Rear axle ratio
+wt      Weight (lb/1000)
+qsec    1/4 mile time
+vs      V/S
+am      Transmission (0 = automatic, 1 = manual)
+gear    Number of forward gears
+carb    Number of carburetors
+</code></pre></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:lightgrey;">
+  <hgroup>
+    <h2>How It Works ?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>This App will simply plot the miles/gallon (mpg) distribution based on your selected cylinders value and type of Transmission in addition to printing out the mean value calculated.</p></li>
+<li><p>Just click on your desired cylinder value and type of transmission and then press submit as shown in the below figure.  </p></li>
+</ul>
+
+<div style='text-align: center;'>
+    <img height='500' src='App_printscreen.png' />
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:lightgrey;">
+  <hgroup>
+    <h2>Example (1)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Output for cylinders value = 4 and transmission type = Manual</li>
+<li><strong>Mean Value (mpg)</strong>
+[1] 28.07</li>
+</ul>
+
+<h2></h2>
+
+<p><img src="data:image/png;base64,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" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:lightgrey;">
+  <hgroup>
+    <h2>Example (2)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Output for cylinders value = All and transmission type = Automatic</li>
+<li><strong>Mean Value (mpg)</strong>
+[1] 17.15</li>
+</ul>
+
+<h2></h2>
+
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAH4CAMAAACR9g9NAAAAXVBMVEX9/v0AAAAAADkAAGUAOTkAOY8AZrU5AAA5AGU5OY85j9plAABlADllAGVltf2POQCPOTmP2/2t2Oa1ZgC1/rW1/v3ajzna24/a/rXa/v39tWX924/9/rX9/tr9/v2J8bknAAAAH3RSTlP///////////////////////////////////////8AzRl2EAAAAAlwSFlzAAALEgAACxIB0t1+/AAACwdJREFUeJztnW1z2tYWRktu7bT2TVJft/QGO/7/P7OA8W5mgI0AHbR11lqTTj/sVtPnWRWSeDnnlzdB8svU/wEyDYqHongoioeieCiKh6J4KIqHongoioeieCiKh6J4KIqHongoioeieCiKh6J4KIqHongoioeieCiKh6J4KIqHongoioeieCiKh6J4KIqHongoioeieCiKh6J4KIqHongoioeieCiKh6J4KIqHongoioeieCiKh6J4KIqHongoioeieCiKh6J4KIqHongoiodyjfiFVKah+Cv+XWmN4qEoHorioSgeiuKhKB6K4qEoHorioSgeiuKhKH7kD5OmTjMUxQ+FFUfxASuO4gNWnIHiX3776+xDzw1WnJPiXx93NzX/2VPfWVOdcfUZ//q4Vk444ztjhJf618e7vxU/N0a5xr983n+h7048K4539QErziXiZ/cm1jBYcU6Lf/m8+PS0vtB/6f2unhXnpPgf376u/3pQ/Ny4+jl+K/z5vn/xnTHGGb9m+ev+A53iKzPCGzgPm78tfeduXvg4NxRWHMUHrDiKD1hxFB+w4ig+YMVRfK8oHorioSh+KKw4ig9YcRQfsOIoPmDFUXzAiqP4XlE8FMVDUfxQWHEUH7DiKD5gxVF8wIqj+IAVR/G9ongoioei+KGw4ig+YMVRfMCKo/iAFUfxASuO4ntF8VAUD0XxQ2HFUXzAiqP4gBVH8QErjuIDVhxXtuwVV7aE4sqWUFzZciisOK5sGbDieFcfsOK4UUHAiuPjXMCK4+Ncr/g4B8XHOSg+zg2FFcfHuYAVR/EBK47iA1YcxQesOIrvFcVDUTwUxQ+FFUfxASuO4gNWHMUHrDiKD1hxFN8rioeieCiKHworjuIDVhzFB6w4ig9YcRQfsOIovlcUD0XxUBQ/FFYcxQesOIoP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" alt="plot of chunk unnamed-chunk-4"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='mtcars Dataset'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='How It Works ?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Example (1)'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Example (2)'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+
+  <script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>   
+  </html>
